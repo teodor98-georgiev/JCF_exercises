@@ -31,3 +31,78 @@ new DefaultProduct(10, "Wienerberger Engineering Brick Red Smooth Class B 73mm -
 
 
 Tech note: Comparator should be implemented in the separate file, in the separate class with the name CustomProductComparator.
+
+
+
+for 05 file:
+Implement back-end for Help Desk.
+
+
+Create the next interface:
+
+public interface HelpDeskFacade {
+
+void addNewSupportTicket(SupportTicket supportTicket);
+
+SupportTicket getNextSupportTicket();
+
+	/**
+ * @return amount of tickets that are not processed
+ */
+int getNumberOfTickets();
+
+}
+
+
+Create DefaultHelpDeskFacade that implements HelpDeskFacade.
+Create SupportTicket interface:
+
+public interface SupportTicket {
+
+Priority getPriority();
+
+/**
+ * This method returns the unique sequential number of the support ticket.
+ * This number can be used as an identifier. 
+ * Order is started from 1.
+ * The less the return number is - that support ticket was created earlier.
+ * 
+ * @return unique sequence number
+ */
+int getSequentialNumber();
+	
+RequestType getRequestType();
+	
+}
+
+
+
+Create DefaultSupportTicket and implement SupportTicket interface.
+
+getNextSupportTicket() method should return ticket and remove it from the HelpDesk in the next order:
+
+Tickets with the higher priority goes first
+In case two tickets have the same priority - the one that was created earlier should be returned.
+Here is the mapping of request type and priority. Using this folder implement RequestType enum and Priority enum
+
+Request Type Enum
+                                Priority Enum
+OTHER                                 LOW
+                                  
+CHANGE_ACCOUNT_DETAILS                LOW
+
+CAN_NOT_LOGIN                         MEDIUM
+
+ACCOUNT_IS_BLOCKED                    MEDIUM
+
+COOPERATION                           MEDIUM
+
+ACCOUNT_IS_HACKED                     HIGH
+
+CAN_NOT_COMPLETE_PURCHASE             HIGH
+
+ORDER_IS_NOT_RECEIVED                 HIGH
+
+
+
+Commit with changes to check only files that were changed (solution) - https://github.com/AndriiPiatakha/learnit_java_core/commit/9134c3ba126a753e6d79b82d547b391419c48c30 the solution is an uncomprehensible porridge...
