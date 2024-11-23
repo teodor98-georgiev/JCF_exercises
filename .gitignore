@@ -4,5 +4,8 @@
 # Allow only 02.MyListImpl folder
 !02.MyListImpl/
 
+# Allow 04.CustomIterator folder
+!04.CustomIterator/
+
 # Allow this .gitignore file itself
 !.gitignore
