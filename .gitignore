@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Allow only 02.MyListImpl folder
+!02.MyListImpl/
+
+# Allow this .gitignore file itself
+!.gitignore
