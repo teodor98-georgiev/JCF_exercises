@@ -34,7 +34,7 @@ Tech note: Comparator should be implemented in the separate file, in the separat
 
 
 
-for 05 file:
+for 05 file:   NOTE: the explanation of method is referred to the method under the explanation
 Implement back-end for Help Desk.
 
 
