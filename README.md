@@ -36,8 +36,12 @@ Tech note: Comparator should be implemented in the separate file, in the separat
 
 for 05 file:   NOTE: the explanation of method is referred to the method under the explanation
 Implement back-end for Help Desk.
-
-
+///
+Create a back end system for a helpdesk facade of a on line store.
+characteristics: the tickets on the desk (expressed by a defaultSupportTicket class) have a request type enumeration and a priority enum and a sequencial number as well, your goal is to accept this tickets and reorganize them in the following way:
+Tickets with the higher priority goes first
+In case two tickets have the same priority - the one that was created earlier should be returned.
+/////
 Create the next interface:
 
 public interface HelpDeskFacade {
